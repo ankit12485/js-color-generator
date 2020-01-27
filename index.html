@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            .main-container{
+                display: flex;
+                min-height: 100vh;
+                margin: 0;
+            }
+            .button-container{
+                margin: auto;
+            }
+            .button{
+                border-radius: 5px;
+                border: none;
+                font-size: 20px;
+                padding: 10px 20px;
+                background: #fff;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body class="main-container">
+        <div class="button-container">
+            <button class="button" onclick="generateRandomColor()">Click here to change background</button>
+        </div>
+        <script>
+            generateRandomColor();
+            function generateRandomColor(){
+                var letters = "0123456789ABCDEF"; 
+                var color = '#'; 
+                for (var i = 0; i < 6; i++) 
+                    color += letters[(Math.floor(Math.random() * 16))];
+                document.body.style.backgroundColor = color;
+            }
+        </script>
+    </body>
+</html>
